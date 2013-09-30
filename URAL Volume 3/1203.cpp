@@ -52,6 +52,7 @@ void qs(int s, int t)
 
 	}
 
+
 	if(s<j)
 		qs(s, j);
 	if(i<t)
