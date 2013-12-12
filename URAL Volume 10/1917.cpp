@@ -23,24 +23,21 @@ int num[maxn];
 int tot[maxn];
 int sum, tim;
 
-void display()
-{
+void display(){
     for(int i=1;i<=can.size();++i)
         cout<<num[i]<<' '<<tot[i]<<endl;     
 }
-int main()
-{
+
+int main(){
     scanf("%d%d", &n, &p);
-    for(int i=1;i<=n;++i)
-    {
+    for(int i=1;i<=n;++i){
         scanf("%d", &tmp);
         can.insert(-tmp);
         ++ditu[tmp];        
     }    
     
     int id=can.size()+1;
-    for(it=can.begin();it!=can.end();++it)
-    {
+    for(it=can.begin();it!=can.end();++it){
         num[--id]=-*it;
         tot[id]=ditu[num[id]];  
         
@@ -55,12 +52,10 @@ int main()
     sum=0;
     tim=0;
     bool flag;
-    while(1)
-    {
+    while(1){
         flag=true;
         for(int i=can.size();i>=1;--i)
-            if(tot[i]!=0 && tot[i]*num[i]<=p)
-            {
+            if(tot[i]!=0 && tot[i]*num[i]<=p){
                 sum+=tot[i];
                 ++tim;
                 
@@ -74,7 +69,6 @@ int main()
         if(flag)
             break;        
     }    
-    
     
     printf("%d %d\n", sum, tim); 
     //system("pause");
