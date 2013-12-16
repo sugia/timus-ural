@@ -6,30 +6,24 @@ using namespace std;
 #define maxn 500022
 int len, n, a[maxn];
 
-void qs(int s, int t)
-{
-	if(t-s<20)
-	{
+void qs(int s, int t){
+	if(t-s<20){
 		for(int i=s;i<t;++i)
 			for(int j=i+1;j<=t;++j)
-				if(a[i]>a[j])
-				{
+				if(a[i]>a[j]){
 					int tmp=a[i];
 					a[i]=a[j];
 					a[j]=tmp;
 				}
 	}
-	else
-	{
+	else{
 		int i=s, j=t, x=a[(s+t)/2];
-		while(i<=j)
-		{
+		while(i<=j){
 			while(a[i]<x)
 				++i;
 			while(x<a[j])
 				--j;
-			if(i<=j)
-			{
+			if(i<=j){
 				int tmp=a[i];
 				a[i]=a[j];
 				a[j]=tmp;
@@ -45,8 +39,7 @@ void qs(int s, int t)
 	}
 }
 
-int main()
-{
+int main(){
 	scanf("%d", &n);
 	for(int i=1;i<=n;++i)
 		scanf("%d", &a[i]);
@@ -58,13 +51,11 @@ int main()
 	//printf("\n");
 
 	int ans=1, sum=0, s=1, t=1;
-	while(s<=n)
-	{
+	while(s<=n){
 		while(a[t+1]==a[s])
 			++t;
 		int tmp=t-s+1;
-		if(sum<tmp)
-		{
+		if(sum<tmp){
 			sum=tmp;
 			ans=a[s];
 		}
