@@ -4,8 +4,7 @@ using namespace std;
 
 
 
-int main()
-{
+int main(){
 	char a, b, c, d;
 	scanf("%c%c%c%c", &a, &b, &c, &d);
 	char ch;
@@ -14,8 +13,7 @@ int main()
 	scanf("%c%c%c%c", &w, &x, &y, &z);
 
 	bool flag=false;
-	if(a==w)
-	{
+	if(a==w){
 		if(b==x && c==y && d==z)
 			flag=true;
 		if(c==x && d==y && b==z)
@@ -24,8 +22,7 @@ int main()
 			flag=true;
 	}
 
-	if(b==w)
-	{
+	if(b==w){
 		if(a==x && d==y && c==z)
 			flag=true;
 		if(d==x && c==y && a==z)
@@ -34,8 +31,7 @@ int main()
 			flag=true;
 	}
 
-	if(c==w)
-	{
+	if(c==w){
 		if(b==x && d==y && a==z)
 			flag=true;
 		if(d==x && a==y && b==z)
@@ -44,8 +40,7 @@ int main()
 			flag=true;
 	}
 
-	if(d==w)
-	{
+	if(d==w){
 		if(c==x && b==y && a==z)
 			flag=true;
 		if(b==x && a==y && c==z)
