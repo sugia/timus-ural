@@ -23,8 +23,7 @@ int main(){
 
 	scanf("%d%d%d", &n, &m, &y);
 	for(int i=0;i<m;++i)
-		if(mod(i, n, m)==y)
-			a[++len]=i;
+		if(mod(i, n, m)==y) a[++len]=i;
 
 	if(len==0){
 		printf("-1\n");
@@ -32,8 +31,7 @@ int main(){
 	}
 
 	printf("%d", a[1]);
-	for(int i=2;i<=len;++i)
-		printf(" %d", a[i]);
+	for(int i=2;i<=len;++i) printf(" %d", a[i]);
 	printf("\n");
 
 	return 0;
