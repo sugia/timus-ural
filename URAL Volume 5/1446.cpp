@@ -8,11 +8,9 @@ using namespace std;
 int n, id[maxn];
 string str[maxn], name, tmp;
 
-int main()
-{
+int main(){
 	scanf("%d\n", &n);
-	for(int i=1;i<=n;++i)
-	{
+	for(int i=1;i<=n;++i){
 		getline(cin, name);
 		getline(cin, tmp);
 
@@ -56,8 +54,7 @@ int main()
 
 	printf("Ravenclaw:\n");
 	for(int i=1;i<=n;++i)
-		if(id[i]==4)
-			cout<<str[i]<<endl;
+		if(id[i]==4) cout<<str[i]<<endl;
 
 	return 0;
 }
