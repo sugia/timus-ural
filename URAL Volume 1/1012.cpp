@@ -7,7 +7,6 @@ using namespace std;
 int n, k, f[maxn][maxn], len[maxn];
 
 void writeln(int x){
-
 	for(int i=len[x];i>=1;--i)
 		printf("%d", f[x][i]);
 	printf("\n");
@@ -20,25 +19,18 @@ void done(int x){
 		f[x][i+1]+=f[x][i]/10;
 		f[x][i]%=10;
 	}
-	while(f[x][len[x]+1]!=0)
-		++len[x];
+	while(f[x][len[x]+1]!=0) ++len[x];
 
-	for(int i=1;i<=len[x];++i)
-		f[x][i]*=(k-1);
+	for(int i=1;i<=len[x];++i) f[x][i]*=(k-1);
 
-	while(f[x][len[x]+1]!=0)
-		++len[x];
+	while(f[x][len[x]+1]!=0) ++len[x];
 
 	for(int i=1;i<=len[x];++i){
 		f[x][i+1]+=f[x][i]/10;
 		f[x][i]%=10;
 	}
 
-	while(f[x][len[x]+1]!=0)
-		++len[x];
-
-
-	//writeln(x);
+	while(f[x][len[x]+1]!=0) ++len[x];
 }
 
 
@@ -53,10 +45,7 @@ int main(){
 	f[1][1]=k-1;
 	len[1]=1;
 
-	//writeln(0);
-	//writeln(1);
-	for(int i=2;i<=n;++i)
-		done(i);
+	for(int i=2;i<=n;++i) done(i);
 
 	writeln(n);
 	return 0;
