@@ -7,7 +7,6 @@ using namespace std;
 int n, a[maxn], top;
 
 int main(){
-//while(1){
 	top=0;
 	scanf("%d", &n);
 	if(n==0){
@@ -18,20 +17,15 @@ int main(){
 		printf("1\n");
 		return 0;
 	}
-
-	for(int i=9;i>=2;--i)
+	for(int i=9;i>=2;--i){
 		while(n%i==0){
 			a[++top]=i;
 			n/=i;
 		}
-
-	if(n!=1)
-		printf("-1");
-	else
-		for(int i=top;i>=1;--i)
-			printf("%d", a[i]);
+	}
+	if(n!=1) printf("-1");
+	else for(int i=top;i>=1;--i) printf("%d", a[i]);
 
 	printf("\n");
-//}
 	return 0;
 }
