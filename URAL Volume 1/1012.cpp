@@ -33,8 +33,6 @@ void done(int x){
 	while(f[x][len[x]+1]!=0) ++len[x];
 }
 
-
-
 int main(){
 	scanf("%d%d", &n, &k);
 	memset(f, 0, sizeof(f));
