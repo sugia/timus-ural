@@ -16,8 +16,7 @@ int main(){
 		++ans;
 		mini=long(ans*p*100)/10000+1;
 		maxi=long(ans*q*100)/10000;
-		if(long(ans*q*100)%10000!=0)
-			++maxi;
+		if(long(ans*q*100)%10000!=0) ++maxi;
 	}
 
 	printf("%ld\n", ans);
