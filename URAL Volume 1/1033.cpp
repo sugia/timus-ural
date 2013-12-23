@@ -4,8 +4,7 @@ using namespace std;
  
 int const maxSize=35;
  
-class ural1033
-{
+class ural1033{
 public:
     ural1033(){ size=0; memset(f,0,sizeof f); }
     void input();
@@ -18,8 +17,7 @@ private:
     int N;
 };
  
-void ural1033::input()
-{
+void ural1033::input(){
      cin>>N;
      int i,j;
      for(i=1; i<=N; i++)
@@ -29,11 +27,9 @@ void ural1033::input()
     for(i=2; i<=N+1; i++)a[i][0]='#';
     for(i=1; i<=N-1; i++)a[N+1][i]='#';
     for(i=1; i<=N-1; i++)a[i][N+1]='#';
- 
 }
  
-void ural1033:: search(int i, int j)
-{
+void ural1033:: search(int i, int j){
     if(i<1||i>N||j<1||j>N||a[i][j]=='#'||f[i][j]==1)return ;
     f[i][j]=1;
     if(a[i-1][j]=='#')size++;
@@ -45,18 +41,13 @@ void ural1033:: search(int i, int j)
     if(a[i+1][j]=='#')size++;
        else search(i+1,j);
 }
- 
- 
-int main()
-{
+
+int main(){
     ural1033 ural;
     ural.input();
  
     ural.search(1,1);
     ural.search(ural.getn(),ural.getn());
- 
     cout<<ural.size*9<<endl;
- 
- //   system("pause");
     return 0;
 }
