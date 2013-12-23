@@ -5,13 +5,11 @@
 #include <string.h>
 using namespace std;
 #define pi acos(-1.0)
-struct node
-{
+struct node{
     double a, b, c;
 };
  
-int main()
-{
+int main(){
     double la1, lo1, la2, lo2, ans, A;
     node s, t;
     char str[100], c;
@@ -44,8 +42,7 @@ int main()
     ans = A*6875.0/2.0;
     printf("The distance to the iceberg: %.2lf miles.\n", ans);
     double res = 0.01*floor(ans*100.0);
-    if(ans - res >= 0.005)
-    {
+    if(ans - res >= 0.005)    {
         if(res + 0.01 < 100.0) printf("DANGER!\n");
     }
     else if(ans < 100.0) printf("DANGER!\n");
