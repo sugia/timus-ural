@@ -6,16 +6,14 @@ const int maxn=55;
 int data[maxn];
 int n, ans;
 
-void change(int &a, int &b, int &c)
-{
+void change(int &a, int &b, int &c){
 	int tmp=a;
 	a=b;
 	b=c;
 	c=tmp;
 }
 
-void check(int a, int b, int c)
-{
+void check(int a, int b, int c){
 	for(int i=1;i<=n;++i)
 	{
 		if(i!=a && abs(data[i]-data[a])==abs(i-a))
@@ -28,14 +26,10 @@ void check(int a, int b, int c)
 	++ans;
 }
 
-
-
-int main()
-{
+int main(){
 	scanf("%d", &n);
 	int tmp;
-	for(int i=1;i<=n;++i)
-	{
+	for(int i=1;i<=n;++i){
 		scanf("%d", &tmp);
 		scanf("%d", &data[tmp]);
 	}
@@ -43,8 +37,7 @@ int main()
 
 	for(int i=1;i<=n-2;++i)
 		for(int j=i+1;j<=n-1;++j)
-			for(int k=j+1;k<=n;++k)
-			{
+			for(int k=j+1;k<=n;++k){
 				change(data[i], data[j], data[k]);
 				check(i, j, k);
 				change(data[i], data[j], data[k]);
