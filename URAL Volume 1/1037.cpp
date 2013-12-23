@@ -42,8 +42,8 @@ int main(){
                         }
                         a[i].next=a[i].prev=&a[i];
                     }
-				lasttime=curtime;
-			}
+		    lasttime=curtime;
+	    }
             d[curtime]=true;
         }
         if(t=='+'){
