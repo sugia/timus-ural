@@ -4,8 +4,7 @@
 #define N 3000
 float c[N+5];
 
-int main()
-{
+int main(){
     int i,k,m;
     float sum,a0,an,t;
     scanf("%d",&m);
@@ -14,8 +13,7 @@ int main()
       scanf("%f",&c[i]);
     sum=0;
     k=m;
-    for(i=1;i<=m;i++)
-    {
+    for(i=1;i<=m;i++){
         sum=sum+k*c[i];
         k--;
     }
