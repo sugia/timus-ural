@@ -29,10 +29,15 @@ void bfs(int x){
 	while(nex(t)!=s){
 		s=nex(s),h=que[s];
 		for(int i=0;i<elist[h].size();++i)
-			if(!used[elist[h][i]] && dis[elist[h][i]]>dis[h]+1){dis[elist[h][i]]=dis[h]+1,used[elist[h][i]]=true,t=nex(t),que[t]=elist[h][i];}
+			if(!used[elist[h][i]] && dis[elist[h][i]]>dis[h]+1){
+				dis[elist[h][i]]=dis[h]+1;
+				used[elist[h][i]]=true;
+				t=nex(t);
+				que[t]=elist[h][i];
+			}
 	}
 	for(int i=1;i<=n;++i)
-		if(!leaf[i])ansdis[i]= ansdis[i] > dis[i] ? ansdis[i] : dis[i];
+		if(!leaf[i]) ansdis[i]= ansdis[i] > dis[i] ? ansdis[i] : dis[i];
 }
 void print(){
 	int ans=maxint, len=0;
