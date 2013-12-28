@@ -82,14 +82,7 @@ void work() {
                 graph[i][t] = dist(tower[i],tower[t]);
         }
     memcpy(dis,graph,sizeof(graph));
- 
-//    for (int i = 1; i <= n; ++i) {
-//        for (int j = 1; j <= n; ++j)
-//            printf("%.2lf ", graph[i][j]);
-//        putchar('\n');
-//    }
- 
- 
+
     for (int k = 1; k <= n; ++k) {
         double tmp;
         for (int i = 1; i < k; ++i)
@@ -116,6 +109,5 @@ int main() {
     input();
     work();
     output();
-//    system("pause");
     return 0;
 }
