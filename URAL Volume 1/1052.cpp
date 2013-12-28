@@ -13,7 +13,6 @@ bool online(int a, int b, int c){
 int main(){
 	scanf("%d", &n);
 	for(int i=1;i<=n;++i) scanf("%d%d", &x[i], &y[i]);
-
 	ans=0;
 	for(int i=1;i<n;++i)
 		for(int j=i+1;j<=n;++j){
