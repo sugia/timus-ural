@@ -1,9 +1,7 @@
-//#include "stdafx.h"
 #include <stdio.h>
 #include <math.h>
  
-int main(void)
-{
+int main(){
     double k, h1, ans, p = 10000000;
     int n;
     scanf("%d %lf", &n, &h1);
