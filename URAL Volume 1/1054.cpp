@@ -12,6 +12,7 @@ void swap(int &a, int &b){
 	a=b;
 	b=tmp;
 }
+
 int main(){
 	int n;
 	scanf("%d", &n);
