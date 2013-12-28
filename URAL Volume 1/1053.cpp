@@ -8,9 +8,7 @@ int n;
 
 inline long long gcd(long long x, long long y){
 	if(x==0 || y==0) return 0;
-	
 	if(x==1 || y==1) return 1;
-
 	long long r;
 	while(y!=0){
 		r=x%y;
