@@ -17,10 +17,12 @@ void init(){
 	}
 	memset(ansdis, 0, sizeof(ansdis));
 }
+
 int nex(int x){
 	++x;
 	return x>=maxn?0:x;
 }
+
 void bfs(int x){
 	memset(used, false, sizeof(used));
 	memset(dis, 62, sizeof(dis));
@@ -39,6 +41,7 @@ void bfs(int x){
 	for(int i=1;i<=n;++i)
 		if(!leaf[i]) ansdis[i]= ansdis[i] > dis[i] ? ansdis[i] : dis[i];
 }
+
 void print(){
 	int ans=maxint, len=0;
 	for(int i=1;i<=n;++i){
@@ -52,6 +55,7 @@ void print(){
 			len?printf("%d ", i):printf("%d\n", i);
 		}
 }
+
 int main(){
 	init();
 	for(int i=1;i<=n;++i)if(leaf[i])bfs(i);
