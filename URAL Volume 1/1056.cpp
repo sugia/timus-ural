@@ -7,6 +7,7 @@ vector<int> elist[maxn];
 int n, k;
 bool leaf[maxn], used[maxn];
 int que[maxn], dis[maxn], ansdis[maxn];
+
 void init(){
 	memset(leaf, true, sizeof(leaf));
 	scanf("%d", &n);
