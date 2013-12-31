@@ -3,13 +3,11 @@
 using namespace std;
 
 template<class T>
-T sqr(T x)
-{
+T sqr(T x){
 	return x*x;
 }
 
-int main()
-{
+int main(){
 	double xa, ya, za, xb, yb, zb, xc, yc, zc, r;
 	scanf("%lf%lf%lf", &xa, &ya, &za);
 	scanf("%lf%lf%lf", &xb, &yb, &zb);
@@ -24,9 +22,7 @@ int main()
 	double a=acos(r/ac);
 	double b=acos(r/bc);
 
-	if(a+b>=c)
-		printf("%.2lf\n", ab);
-	else
-		printf("%.2lf\n", (c-a-b)*r + sqrt(sqr(ac) - sqr(r)) + sqrt(sqr(bc) - sqr(r)));
+	if(a+b>=c) printf("%.2lf\n", ab);
+	else printf("%.2lf\n", (c-a-b)*r + sqrt(sqr(ac) - sqr(r)) + sqrt(sqr(bc) - sqr(r)));
 	return 0;
 }
