@@ -3,8 +3,7 @@
 using namespace std;
 const int maxn=101002;
 int a[maxn], n, ans;
-int main()
-{
+int main(){
 	while(cin>>n && n!=0){
 		a[0]=0;
 		a[1]=1;
@@ -18,9 +17,6 @@ int main()
 				ans=a[2*i+1];
 		}
 		cout<<ans<<endl;
-//		for(int i=0;i<n;++i)
-//			cout<<a[i]<<' ';
-//		cout<<endl;
 	}
 	return 0;
 }
