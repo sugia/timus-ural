@@ -10,25 +10,21 @@ const double pi=3.14159265358979;
 int len, r;
 double ans, duijiaoxian, slen;
 
-double sqr(double x)
-{
+double sqr(double x){
 	return x*x;
 }
 
-int main()
-{
+int main(){
 	cin>>len>>r;
 	slen=len*1.0/2;
 	duijiaoxian=sqrt((double)2*sqr(slen));
-	if(r<=slen)
-	{
+	if(r<=slen){
 		ans=sqr(r)*pi;
 		printf("%.3lf\n", ans);
 		return 0;
 	}
 
-	if(r>=duijiaoxian)
-	{
+	if(r>=duijiaoxian){
 		ans=len*len;
 		printf("%.3lf\n", ans);
 		return 0;
@@ -38,16 +34,9 @@ int main()
 	double delta=atan2(a, slen);
 	double theta=pi/2-2*delta;
 
-	//cout<<a<<endl;
-	//cout<<delta<<endl;
-	//cout<<theta<<endl;
-
-
 	ans=theta/(2*pi) *sqr(r)*pi;
 	ans+=a*slen;
 	ans*=4;
-
 	printf("%.3lf\n", ans);
-
 	return 0;
 }
