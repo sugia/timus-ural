@@ -5,8 +5,7 @@ using namespace std;
 const int maxn=15004;
 int sushu[maxn], tmp, top, k, n;
 bool flag;
-int main()
-{
+int main(){
 	sushu[1]=2;
 	sushu[2]=3;
 	sushu[3]=5;
