@@ -12,9 +12,7 @@ void dfs(int L,int s){
 	else	a[L]=1,dfs(L-1,s-f[L][0]);
 }
  
-int main()
-{ 
-
+int main(){ 
 	scanf("%d%d",&n,&k);
 	f[0][0]=1;
 	for (int i=1;i<=n;i++){
@@ -27,12 +25,8 @@ int main()
 		}
 	}
  
-	if (!tt)	printf("-1");
-	else
-	for (int i=n;i;i--)
-		printf("%d",a[i]);
- 
+	if (!tt) printf("-1");
+	else for (int i=n;i;i--) printf("%d",a[i]);
 	printf("\n");
- 
 	return 0;
 }
