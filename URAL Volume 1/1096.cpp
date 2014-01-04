@@ -2,10 +2,12 @@
 const int maxn=1022;
 int nx[maxn], ny[maxn], parent[maxn], id[maxn], quex[maxn], quey[maxn], ans[maxn], n, target;
 bool used[maxn]={0};
+
 int nex(int x){
 	++x;
 	return x>=maxn?0:x;
 }
+
 int main(){
 	scanf("%d", &n);
 	for(int i=1;i<=n;++i){
