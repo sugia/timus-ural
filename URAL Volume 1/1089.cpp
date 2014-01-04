@@ -5,8 +5,7 @@
 #include<ctype.h>
 char s[1001][9];
 int ans=0;
-int check(char a[],char b[])
-{
+int check(char a[],char b[]){
     int sum=0;
     if(strlen(a)!=strlen(b)) return false;
     for(int i=0;i<strlen(a);i++)
@@ -14,8 +13,7 @@ int check(char a[],char b[])
     if(sum<=1) return true;
     else return false;
 }
-int main()
-{
+int main(){
     int n=0,l=0,i;
     char ch;
     char st[10];
@@ -26,12 +24,11 @@ int main()
     n--;
     gets(st);
     memset(st,0,sizeof(st));
-    while(scanf("%c",&ch)!=EOF)
-    {
+    while(scanf("%c",&ch)!=EOF){
         bool b=false;
         if(!isalpha(ch)){
           for(i=1;i<=n;i++)
-           if(check(st,s[i])){
+            if(check(st,s[i])){
               printf("%s",s[i]);
               if(strcmp(st,s[i])!=0)ans++;
               b=true;
