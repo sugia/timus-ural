@@ -43,9 +43,7 @@ int main(){
 		scanf("%d%d", &id[i], &ran[i]);
 		step[i]=i;
 	}
-
 	qs(0, n-1);
-
 	for(int i=0;i<n;++i)
 		printf("%d %d\n", id[i], ran[i]);
 
