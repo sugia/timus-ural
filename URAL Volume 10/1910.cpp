@@ -17,24 +17,19 @@ const int maxn=1022;
 int data[maxn];
 int n;
 
-int main()
-{
+int main(){
     scanf("%d", &n);
     for(int i=1;i<=n;++i)
         scanf("%d", &data[i]);
     int id=2;
     int tot=data[1]+data[2]+data[3];
-    for(int i=3;i<n;++i)
-    {
+    for(int i=3;i<n;++i){
         int tmp=data[i-1]+data[i]+data[i+1];
-        if(tmp>tot)
-        {
+        if(tmp>tot){
             tot=tmp;
             id=i;           
         }        
     }    
     printf("%d %d\n", tot, id);
-    
-    //system("pause");
     return 0;
 }
