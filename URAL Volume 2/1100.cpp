@@ -31,10 +31,8 @@ void qs(int s, int t){
 			--j;
 		}
 	}
-	if(i<t)
-		qs(i, t);
-	if(s<j)
-		qs(s, j);
+	if(i<t)	qs(i, t);
+	if(s<j)	qs(s, j);
 }
 
 int main(){
