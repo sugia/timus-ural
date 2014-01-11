@@ -6,108 +6,69 @@ using namespace std;
 int que[maxn], color[maxn], n, s, t, h;
 bool used[maxn]={0}, tutu[maxn][maxn]={0};
 
-int nex(int x)
-{
+int nex(int x){
 	++x;
-	if(x==maxn)
-		x=0;
+	if(x==maxn) x=0;
 	return x;
 }
 
-int pre(int x)
-{
+int pre(int x){
 	--x;
-	if(x<0)
-		x=maxn;
+	if(x<0)	x=maxn;
 	return x;
 }
 
-int main()
-{
+int main(){
 	scanf("%d", &n);
 	int x;
-	for(int i=1;i<=n;++i)
-	{
+	for(int i=1;i<=n;++i){
 		scanf("%d", &x);
-		if(x==0)
-		{
+		if(x==0){
 			printf("0\n");
 			return 0;
 		}
-		while(x!=0)
-		{
+		while(x!=0){
 			tutu[i][x]=true;
 			tutu[x][i]=true;
 			scanf("%d", &x);
 		}
 	}
 
-	//for(int i=1;i<=n;++i)
-	//{
-	//	for(int j=1;j<=n;++j)
-	//		if(tutu[i][j])
-	//			cout<<1;
-	//		else
-	//			cout<<' ';
-	//	cout<<endl;
-	//}
-
-
 	s=1, t=0;
 	for(int i=1;i<=n;++i)
-		if(!used[i])
-		{
+		if(!used[i]){
 			color[i]=0;
 			used[i]=true;
-//			cout<<i<<' '<<color[i]<<endl;
 
 			t=nex(t);
 			que[t]=i;
 			s=pre(s);
 
-			while(nex(t)!=s)
-			{
+			while(nex(t)!=s){
 				s=nex(s);
 				h=que[s];
 				for(int j=1;j<=n;++j)
-					/*if(used[j] && color[h]==color[j])
-					{
-						printf("0\n");
-						return 0;
+					if(!used[j] && tutu[h][j]){
+						color[j]=1-color[h];
+						used[j]=true;
+						t=nex(t);
+						que[t]=j;
 					}
-					else*/
-						if(!used[j] && tutu[h][j])
-						{
-							color[j]=1-color[h];
-							used[j]=true;
-//							cout<<j<<' '<<color[j]<<endl;
-
-							t=nex(t);
-							que[t]=j;
-						}
 			}
 		}
 
 	int sum=0;
 	for(int i=1;i<=n;++i)
-		if(color[i]==0)
-			++sum;
+		if(color[i]==0)	++sum;
 
 	printf("%d\n", sum);
 	sum=0;
 	for(int i=1;i<=n;++i)
-		if(color[i]==0)
-		{
+		if(color[i]==0){
 			++sum;
-			if(sum!=1)
-				printf(" ");
-
+			if(sum!=1) printf(" ");
 			printf("%d", i);
 		}
 	printf("\n");
-
-	//for(int i=1;i<=n;++i)
-	//	cout<<color[i]<<' ';
-	//cout<<endl;
 	return 0;
 }
