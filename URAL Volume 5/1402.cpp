@@ -1,8 +1,5 @@
-//#include "stdafx.h"
 #include<stdio.h>
- 
-int main()
-{
+int main(){
     const char* s[21]={"0","2","12","60",
 		"320","1950","13692","109592","986400",
 		"9864090","108505100","1302061332",
@@ -12,6 +9,6 @@ int main()
     int n;
     scanf("%d",&n);
     printf("%s",s[n-1]);
-	printf("\n");
+    rintf("\n");
     return 0;
 }
